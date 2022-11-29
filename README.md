@@ -8,18 +8,17 @@ jitsi-terraform is using helm provider to setup jitsi to Kubernetes
 
 Pre-requisite: Setup Kubernetes Cluster
 
-Clone the repo
+Clone the repo and execute following commands to setup jitsi
 
 ```sh
 cd jitsi-terraform
 terraform init
-terraform plan
 terraform apply
 ```
 
-Once applied: Try to browse using external IP of load balancer.
+Try to browse using external IP of load balancer.
 
-For development environment use port forwarding
+For development environment (minikube) use port forwarding
 
 ```sh
 kubectl port-forward <pod-name> 80:80
